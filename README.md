@@ -17,6 +17,7 @@ See the [User Manual](https://prestosql.io/docs/current/) for deployment instruc
 
 Presto is a standard Maven project. Simply run the following command from the project root directory:
 
+    ./mvn clean install -U -DskipTests -Dair.check.skip-all=true -T 4
     ./mvnw clean install
 
 On the first build, Maven will download all the dependencies from the internet and cache them in the local repository (`~/.m2/repository`), which can take a considerable amount of time. Subsequent builds will be faster.
